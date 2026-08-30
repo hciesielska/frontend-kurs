@@ -1,4 +1,5 @@
 import TeamMemberCard from './TeamMemberCard';
+import Script from  'next/script';
 
 export default function Page() {
   const teamMembers = [
@@ -22,6 +23,11 @@ export default function Page() {
           skills={member.skills}
         />
       ))}
+      <Script id="alert-script">
+        {`
+          alert('Witaj w zadaniu z kursu solvro!');
+        `}
+      </Script>
     </main>
   );
 }
